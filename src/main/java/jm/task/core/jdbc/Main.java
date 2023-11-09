@@ -9,8 +9,6 @@ public class Main {
         // реализуйте алгоритм здесь
         userService.createUsersTable();
 
-        userService.createUsersTable();
-
         userService.saveUser("Name1", "LastName1", (byte) 20);
         userService.saveUser("Name2", "LastName2", (byte) 25);
         userService.saveUser("Name3", "LastName3", (byte) 31);

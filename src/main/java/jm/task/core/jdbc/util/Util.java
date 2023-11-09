@@ -12,7 +12,7 @@ import java.util.Properties;
 public class Util {
     // реализуйте настройку соеденения с БД
     private static Util instance = null;
-    private static SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     private Util() {
         if (sessionFactory == null) {
@@ -35,7 +35,7 @@ public class Util {
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 e.printStackTrace();
             }
         }
